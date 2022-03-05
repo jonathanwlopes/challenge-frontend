@@ -12,6 +12,7 @@ export const WrapperInfo = styled.div`
 export const Buy = styled.button`
   all: unset;
   margin-top: 7px;
+  width: 125px;
   height: 32px;
   color: ${({ theme }) => theme.colors.white};
   text-transform: uppercase;
@@ -24,7 +25,6 @@ export const Buy = styled.button`
   justify-content: center;
   visibility: hidden;
   opacity: 0;
-  width: 0;
   transition-duration: 0.3s;
 
   &:hover {
@@ -40,6 +40,7 @@ export const Container = styled.article`
   justify-content: center;
   width: 216px;
   margin: 0 auto;
+  position: relative;
 
   &:hover {
     cursor: pointer;
@@ -51,7 +52,6 @@ export const Container = styled.article`
     ${Buy} {
       visibility: visible;
       opacity: 1;
-      width: 125px;
     }
   }
 `
@@ -110,4 +110,24 @@ export const WrapperInstallments = styled.div`
 export const Installments = styled.span`
   font-size: ${({ theme }) => theme.fontSizes[11]};
   line-height: ${({ theme }) => theme.fontSizes[15]};
+`
+
+export const SealText = styled.span`
+  position: absolute;
+  top: -10px;
+  left: 13px;
+  font-size: ${({ theme }) => theme.fontSizes[16]};
+  line-height: ${({ theme }) => theme.fontSizes[24]};
+  color: ${({ theme }) => theme.colors.white};
+  font-weight: 900;
+`
+
+export const Seal = styled.div`
+  border-bottom: 50px solid transparent;
+  border-top: 20px solid ${({ theme }) => theme.colors.contrastBG};
+  border-left: 20px solid transparent;
+  border-right: 50px solid ${({ theme }) => theme.colors.contrastBG};
+  position: absolute;
+  top: 0;
+  right: 0;
 `

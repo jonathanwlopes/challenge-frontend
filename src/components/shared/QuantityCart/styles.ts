@@ -10,13 +10,13 @@ export const Container = styled.div`
 `
 
 export const Quantity = styled.div`
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.contrastBG};
-  color: ${({ theme }) => theme.colors.contrastText};
+  color: ${({ theme }) => theme.colors.contrastTextBG};
   font-weight: 700;
   font-size: ${({ theme }) => theme.fontSizes[12]};
   line-height: ${({ theme }) => theme.fontSizes[16]};

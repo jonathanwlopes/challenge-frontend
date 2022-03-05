@@ -8,9 +8,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: ${({ theme }) => theme.colors.background};
     -webkit-font-smoothing: antialiased;
   }
+  
   body,
    input, textarea, button {
     font-family: ${({ theme }) => theme.fonts.default};
@@ -38,5 +38,14 @@ export const GlobalStyle = createGlobalStyle`
   [disabled] {
     opacity: 0.6;
     cursor: not-allowed;
+  }
+
+  .swiper-pagination-bullet {
+    opacity: unset;
+    background: ${({ theme }) => theme.colors.bullets};
+  }
+
+  .swiper-pagination-bullet-active {
+    background: ${({ theme }) => theme.colors.bulletsActive};
   }
 `

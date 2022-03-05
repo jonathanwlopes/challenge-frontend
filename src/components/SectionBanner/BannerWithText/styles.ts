@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 export const Container = styled.div`
   position: relative;
+
 `
 
 export const WrapperText = styled.div`
@@ -29,4 +30,12 @@ export const SubTitle = styled.p`
   max-width: 300px;
 `
 
-export const Image = styled.img``
+export const WrapperImage = styled.div`
+  max-width: 1920px;
+  max-height: 430px;
+`
+
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+`

@@ -1,11 +1,12 @@
+import * as S from "./styles"
 import { Icon, MyAccount, Search } from "../shared"
 import { QuantityCart } from "../shared/QuantityCart"
-import * as S from "./styles"
 
 export const Header = () => {
   return (
     <S.Container>
       <S.Center>
+        <S.OpenMenu name="open-menu" className="icon-open-menu" />
         <S.Logo>
           <Icon name="logo" />
         </S.Logo>
