@@ -33,6 +33,9 @@ export const WrapperRow = styled.div`
   display: flex;
   width: 80%;
 `
+
+export const Link = styled.div``
+
 export const Logo = styled(Icon)`
   display: flex;
   align-items: center;
@@ -40,10 +43,4 @@ export const Logo = styled(Icon)`
   max-width: 170px;
   max-height: 41px;
   cursor: pointer;
-`
-
-export const OpenMenu = styled(Icon)`
-  &.icon-open-menu {
-    display: none;
-  }
 `

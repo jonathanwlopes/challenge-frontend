@@ -17,7 +17,7 @@ export const BannerWithText = ({ title, subtitle, imageUrl }: BannerWithTextProp
         <S.SubTitle>{subtitle}</S.SubTitle>
       </S.WrapperText>
       <S.WrapperImage>
-        <S.Image src={imageUrl} alt={title} />
+        <S.Image src={imageUrl} alt={title} title={title}/>
       </S.WrapperImage>
     </S.Container>
   )

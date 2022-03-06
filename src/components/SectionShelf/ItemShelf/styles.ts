@@ -73,7 +73,7 @@ export const Image = styled.img`
   height: 100%;
 `
 
-export const Name = styled.span`
+export const Name = styled.h3`
   display: inline-block;
   margin-top: 7px;
   font-weight: 600;

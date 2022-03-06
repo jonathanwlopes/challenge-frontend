@@ -14,17 +14,17 @@ export const Logo = styled(Icon)`
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 170px;
-  max-height: 41px;
   cursor: pointer;
-
-  &.logo {
-    width: 102.46px;
-    height: 25px;
-  }
+  width: 102.46px;
+  height: 25px;
 `
 export const WrapperRow = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+`
+
+export const OpenMenu = styled(Icon)`
+  max-width: 22px;
+  max-height: 15px;
 `

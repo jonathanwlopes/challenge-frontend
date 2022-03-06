@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Icon } from ".."
 
 export const Container = styled.div`
   display: flex;
@@ -16,4 +17,9 @@ export const Text = styled.span`
   font-size: ${({ theme }) => theme.fontSizes[13]};
   line-height: ${({ theme }) => theme.space[16]};
   color: ${({ theme }) => theme.colors.text};
+`
+
+export const IconProfile = styled(Icon)`
+  max-width: 18px;
+  max-height: 18px;
 `

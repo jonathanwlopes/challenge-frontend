@@ -73,8 +73,8 @@ export const Shelf = () => {
             ))}
           </Swiper>
           <S.Pagination className="swiper-pagination swiper-pagination-shelf" />
-          <S.ArrowLeft name="arrow-left" className="swiper-button-prev" labelIcon="Seta Esquerda" />
-          <S.ArrowRight name="arrow-right" className="swiper-button-next" labelIcon="Seta Direita" />
+          <S.ArrowLeft size="13" icon="arrow-left" className="swiper-button-prev" />
+          <S.ArrowRight size="13" icon="arrow-right" className="swiper-button-next" />
         </S.WrapperShelf>
       </S.Center>
     </S.Container>

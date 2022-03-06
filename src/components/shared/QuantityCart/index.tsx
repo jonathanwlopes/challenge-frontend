@@ -1,5 +1,4 @@
 import * as S from "./styles"
-import { Icon } from "../Icon"
 import { useCart } from "../../../context/Cart"
 import { useMemo } from "react"
 
@@ -14,7 +13,7 @@ export const QuantityCart = () => {
 
   return (
     <S.Container tabIndex={0}>
-      <Icon name="cart" labelIcon="Minicart"/>
+      <S.IconCart size="18" icon="shopping-cart" />
       <S.Quantity>{cartTotalQuantity}</S.Quantity>
     </S.Container>
   )

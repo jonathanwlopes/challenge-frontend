@@ -33,7 +33,7 @@ export const Title = styled.h2`
   }
 `
 
-export const SubTitle = styled.h1`
+export const SubTitle = styled.h2`
   font-weight: 900;
   font-size: ${({ theme }) => theme.fontSizes[45]};
   line-height: 45px;
@@ -54,4 +54,6 @@ export const WrapperImage = styled.div`
 export const Image = styled.img`
   width: 100%;
   height: 100%;
+
+
 `

@@ -51,16 +51,22 @@ export const WrapperShelf = styled.div`
   }
 `
 
-export const Arrows = styled.div``
-
 export const ArrowLeft = styled(Icon)`
   width: 12.92px;
   height: 22px;
+
+  @media screen and (max-width: 1240px) {
+    display: none !important;
+  }
 `
 
 export const ArrowRight = styled(Icon)`
   width: 12.92px;
   height: 22px;
+
+  @media screen and (max-width: 1240px) {
+    display: none !important;
+  }
 `
 
 export const Pagination = styled.div`

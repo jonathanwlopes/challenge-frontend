@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Icon } from ".."
 
 export const Container = styled.div`
   display: flex;
@@ -23,4 +24,9 @@ export const Quantity = styled.div`
 
   border-radius: ${({ theme }) => theme.radii.full};
   margin-left: 5px;
+`
+
+export const IconCart = styled(Icon)`
+  max-width: 18px;
+  max-height: 18px;
 `

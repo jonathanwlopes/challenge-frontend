@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
     outline-color: ${({ theme }) => theme.colors.outlineColor};
   }
 
-  div, article {
+  div, article, svg, img {
     outline-color: ${({ theme }) => theme.colors.outlineColor};
   }
 

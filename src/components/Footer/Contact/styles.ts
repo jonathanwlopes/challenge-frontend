@@ -31,17 +31,14 @@ export const Text = styled.span`
 `
 
 export const IconEmail = styled(Icon)`
-  &.icon-email {
-    min-width: 15.19px;
-    min-height: 18.58px;
-  }
+  max-width: 16px;
+  max-height: 18.58px;
 `
 
 export const IconHeadphone = styled(Icon)`
-  &.icon-headphone {
-    min-width: 15.19px;
-    min-height: 18.58px;
-  }
+  min-width: 16px;
+  max-width: 16px;
+  height: 18.58px;
 `
 
 export const Container = styled.div``
