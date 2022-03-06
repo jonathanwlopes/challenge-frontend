@@ -5,14 +5,6 @@ export const Item = styled.span`
   line-height: ${({ theme }) => theme.fontSizes[12]};
   color: ${({ theme }) => theme.colors.white};
 `
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  ${Item} + ${Item} {
-    margin-top: 15px;
-  }
-`
 
 export const Title = styled.h4`
   display: inline-block;
@@ -29,5 +21,14 @@ export const Title = styled.h4`
     bottom: -16px;
     border-bottom: 5px solid ${({ theme }) => theme.colors.white};
     width: 44.94px;
+  }
+`
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  ${Item} + ${Item} {
+    margin-top: 10px;
   }
 `

@@ -1,12 +1,6 @@
 import styled from "styled-components"
 import { container } from "../../styles/theme/utils/container"
 
-export const Container = styled.section`
-  background-color: ${({ theme }) => theme.colors.backgroundLight};
-  margin-top: 70px;
-  padding: 24px 0 36px;
-`
-
 export const Center = styled.div`
   ${container.center};
   display: flex;
@@ -21,12 +15,7 @@ export const Title = styled.h3`
   font-weight: 700;
 `
 
-export const Form = styled.form`
-  margin-top: 16px;
-  display: flex;
-  position: relative;
-`
-
+export const NameLabel = styled.label``
 interface InputNameProps {
   error: boolean
 }
@@ -118,4 +107,57 @@ export const SubmitError = styled.div`
   color: ${({ theme }) => theme.colors.errors};
   font-size: ${({ theme }) => theme.fontSizes[12]};
   line-height: ${({ theme }) => theme.fontSizes[12]};
+`
+
+export const Form = styled.form`
+  margin-top: 16px;
+  display: flex;
+  position: relative;
+`
+
+export const Container = styled.section`
+  background-color: ${({ theme }) => theme.colors.backgroundLight};
+  margin-top: 70px;
+  padding: 24px 0 36px;
+
+  @media screen and (max-width: 780px) {
+    padding: 24px 16px 16px 16px;
+
+    ${Form} {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    ${InputName} {
+      margin: unset;
+      width: 100%;
+    }
+
+    ${InputEmail} {
+      margin: unset;
+      margin-top: 22px;
+      width: 100%;
+    }
+
+    ${Send} {
+      margin: unset;
+      width: 100%;
+      margin-top: 7px;
+    }
+
+    ${NameError} {
+      bottom: unset;
+      top: -13px;
+    }
+
+    ${EmailError} {
+      bottom: unset;
+      left: 0;
+      top: 8px;
+    }
+
+    ${SubmitError} {
+      bottom: -14px;
+    }
+  }
 `

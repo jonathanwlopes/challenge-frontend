@@ -1,12 +1,5 @@
 import styled from "styled-components"
 
-export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-`
-
 export const Title = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes[14]};
   line-height: ${({ theme }) => theme.fontSizes[14]};
@@ -38,5 +31,22 @@ export const Button = styled.button`
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.black}CC;
+  }
+`
+
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media screen and (max-width: 480px) {
+    ${Button} {
+      width: 100%;
+    }
+
+    ${Message} {
+      text-align: center;
+    }
   }
 `

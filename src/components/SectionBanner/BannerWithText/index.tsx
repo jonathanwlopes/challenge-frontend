@@ -1,3 +1,6 @@
+import { useWindowDimensions } from "../../../hooks/Responsive"
+import { theme } from "../../../styles/theme/theme"
+import { HeaderMobile } from "../../Header/Mobile"
 import * as S from "./styles"
 
 interface BannerWithTextProps {

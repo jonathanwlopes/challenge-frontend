@@ -1,10 +1,10 @@
-import * as S from './styles'
-import { Icon } from '../Icon'
+import * as S from "./styles"
+import { Icon } from "../Icon"
 
 export const MyAccount = () => {
   return (
-    <S.Container>
-      <Icon name="profile" />
+    <S.Container tabIndex={0}>
+      <Icon name="profile" labelIcon="Perfil" />
       <S.Text>Minha Conta</S.Text>
     </S.Container>
   )

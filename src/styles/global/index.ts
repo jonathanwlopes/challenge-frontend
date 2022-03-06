@@ -16,6 +16,11 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.fonts.default};
     font-weight: 400;
     color: ${({ theme }) => theme.colors.text};
+    outline-color: ${({ theme }) => theme.colors.outlineColor};
+  }
+
+  div, article {
+    outline-color: ${({ theme }) => theme.colors.outlineColor};
   }
 
   h1, h2, h3, h4, h5, h6, strong {
@@ -40,12 +45,35 @@ export const GlobalStyle = createGlobalStyle`
     cursor: not-allowed;
   }
 
+  .sr-only {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
   .swiper-pagination-bullet {
     opacity: unset;
     background: ${({ theme }) => theme.colors.bullets};
+    width: 10px;
+    height: 10px;
   }
 
   .swiper-pagination-bullet-active {
     background: ${({ theme }) => theme.colors.bulletsActive};
+    width: 10px;
+    height: 10px;
+  }
+
+  @media screen and (max-width: 1240px) {
+    .swiper-pagination-bullet-active, .swiper-pagination-bullet{
+    width: 7px;
+    height: 7px;
+    }
   }
 `

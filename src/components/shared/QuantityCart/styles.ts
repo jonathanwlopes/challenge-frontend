@@ -10,8 +10,8 @@ export const Container = styled.div`
 `
 
 export const Quantity = styled.div`
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
   display: flex;
   align-items: center;
   justify-content: center;

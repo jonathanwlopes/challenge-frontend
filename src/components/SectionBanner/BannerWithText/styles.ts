@@ -2,7 +2,6 @@ import styled from "styled-components"
 
 export const Container = styled.div`
   position: relative;
-
 `
 
 export const WrapperText = styled.div`
@@ -14,20 +13,37 @@ export const WrapperText = styled.div`
   position: absolute;
   top: 35%;
   left: 20%;
+  transform: translate(0, -35%);
+
+  @media screen and (max-width: 480px) {
+    max-width: 277px;
+    left: 8%;
+  }
 `
 
 export const Title = styled.h2`
   color: ${({ theme }) => theme.colors.white};
-  line-height: 41px;
+  line-height: 40.92px;
   font-weight: 700;
+  font-size: ${({ theme }) => theme.fontSizes[30]};
+
+  @media screen and (max-width: 480px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 `
 
-export const SubTitle = styled.p`
+export const SubTitle = styled.h1`
   font-weight: 900;
-  font-size: ${({ theme }) => theme.fontSizes[30]};
-  line-height: 41px;
+  font-size: ${({ theme }) => theme.fontSizes[45]};
+  line-height: 45px;
   color: ${({ theme }) => theme.colors.white};
-  max-width: 300px;
+  max-width: 450px;
+
+  @media screen and (max-width: 480px) {
+    font-size: 30px;
+    line-height: 30px;
+  }
 `
 
 export const WrapperImage = styled.div`

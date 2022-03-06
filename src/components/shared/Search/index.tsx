@@ -5,9 +5,9 @@ import { Icon } from "../Icon"
 
 export const Search = ({ ...rest }: SearchProps) => {
   return (
-    <S.Container>
+    <S.Container aria-label="Barra de pesquisa, digite o que você está procurando?" tabIndex={0}>
       <S.Input {...rest} />
-      <Icon name="search" />
+      <Icon name="search" labelIcon="Pesquisa" />
     </S.Container>
   )
 }

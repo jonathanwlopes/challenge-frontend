@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Navigation } from "swiper"
+import { Navigation, Pagination } from "swiper"
 import { SwiperSlide, Swiper } from "swiper/react"
 import { useProduct } from "../../../context/Product"
 import { Product } from "../../../context/Product/types"
@@ -11,6 +11,23 @@ import * as S from "./styles"
 export const Shelf = () => {
   const { products } = useProduct()
   const [listProducts, setListProducts] = useState<Product[]>([])
+
+  const breakpoints = {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 5,
+    },
+
+    780: {
+      slidesPerView: 3,
+      spaceBetween: 38,
+    },
+
+    1321: {
+      slidesPerView: 4,
+      spaceBetween: 100,
+    },
+  }
 
   useEffect(() => {
     const newListProducts = products.map((product) => {
@@ -41,21 +58,23 @@ export const Shelf = () => {
         <S.WrapperShelf>
           <Swiper
             slidesPerView={4}
-            modules={[Navigation]}
+            modules={[Navigation, Pagination]}
             navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
-            spaceBetween={5}
+            breakpoints={breakpoints}
+            pagination={{
+              clickable: true,
+              el: ".swiper-pagination-shelf",
+            }}
           >
             {listProducts.map((product) => (
               <SwiperSlide key={`${product.productId}-product-id`}>
                 <ItemShelf product={product} />
               </SwiperSlide>
             ))}
-
-            <S.Arrows>
-              <S.ArrowLeft name="arrow-left" className="swiper-button-prev" />
-              <S.ArrowRight name="arrow-right" className="swiper-button-next" />
-            </S.Arrows>
           </Swiper>
+          <S.Pagination className="swiper-pagination swiper-pagination-shelf" />
+          <S.ArrowLeft name="arrow-left" className="swiper-button-prev" labelIcon="Seta Esquerda" />
+          <S.ArrowRight name="arrow-right" className="swiper-button-next" labelIcon="Seta Direita" />
         </S.WrapperShelf>
       </S.Center>
     </S.Container>

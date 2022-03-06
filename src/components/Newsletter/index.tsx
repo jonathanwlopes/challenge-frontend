@@ -76,12 +76,34 @@ export const Newsletter = () => {
         <S.Title>Participe de nossas news com promoções e novidades!</S.Title>
         <S.Form autoComplete="off" onSubmit={handleSubmit}>
           <S.WrapperColumn>
-            <S.InputName value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="Digite seu nome" error={nameError} />
+            <S.NameLabel htmlFor="name" className="sr-only">
+              Digite seu nome
+            </S.NameLabel>
+            <S.InputName
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              type="text"
+              placeholder="Digite seu nome"
+              error={nameError}
+              id="name"
+              name="name"
+            />
             {nameError && <S.NameError>Preencha com seu nome completo</S.NameError>}
           </S.WrapperColumn>
 
           <S.WrapperColumn>
-            <S.InputEmail value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Digite seu email" error={emailError} />
+            <S.NameLabel htmlFor="email" className="sr-only">
+              Digite seu email
+            </S.NameLabel>
+            <S.InputEmail
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              type="email"
+              placeholder="Digite seu email"
+              error={emailError}
+              id="email"
+              name="email"
+            />
             {emailError && <S.EmailError>Preencha com um e-mail válido</S.EmailError>}
           </S.WrapperColumn>
 

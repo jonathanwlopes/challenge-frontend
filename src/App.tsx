@@ -6,6 +6,7 @@ import { Home } from "./Pages"
 import { theme } from "./styles/theme/theme"
 import { GlobalStyle } from "./styles/global"
 import "swiper/css/bundle"
+import { Footer } from "./components/Footer"
 
 export const App = () => {
   return (
@@ -15,6 +16,7 @@ export const App = () => {
           <GlobalStyle />
           <Header />
           <Home />
+          <Footer />
         </ThemeProvider>
       </CartContextProvider>
     </ProductContextProvider>

@@ -33,7 +33,7 @@ export const WrapperRow = styled.div`
   display: flex;
   width: 80%;
 `
-export const Logo = styled.div`
+export const Logo = styled(Icon)`
   display: flex;
   align-items: center;
   justify-content: center;

@@ -3,6 +3,7 @@ import * as S from "./styles"
 import { Product } from "../../../context/Product/types"
 import { Stars } from "../Stars"
 import { useCart } from "../../../context/Cart"
+import { useEffect, useRef, useState } from "react"
 
 interface ItemShelfProps {
   product: Product
@@ -14,9 +15,11 @@ export const ItemShelf = ({ product }: ItemShelfProps) => {
   const isPriceOff = !!product.listPrice
   const isInstallments = product.installments.length > 0
 
+  const [isFocus, setIsFocus] = useState(false)
+
   return (
-    <S.Container>
-      <S.Image src={product.imageUrl} alt={product.productName} />
+    <S.Container tabIndex={0}>
+      <S.Image src={product.imageUrl} alt={product.productName} title={product.productName} />
       <S.WrapperInfo>
         <S.Name>{product.productName}</S.Name>
         <Stars filled={product.stars} />
@@ -25,7 +28,9 @@ export const ItemShelf = ({ product }: ItemShelfProps) => {
         <S.WrapperInstallments>
           {isInstallments && <S.Installments>{`ou em ${product.installments[0]?.quantity}x de ${product.installments[0]?.value}`}</S.Installments>}
         </S.WrapperInstallments>
-        <S.Buy onClick={() => handleBuy(product)}>Comprar</S.Buy>
+        <S.Buy aria-label={`Comprar ${product.productName}`} onClick={() => handleBuy(product)} tabIndex={0}>
+          Comprar
+        </S.Buy>
       </S.WrapperInfo>
       {isPriceOff && (
         <S.Seal>

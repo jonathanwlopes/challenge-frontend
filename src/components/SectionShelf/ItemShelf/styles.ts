@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import * as Stars from "../Stars/styles"
 
 export const WrapperInfo = styled.div`
   display: flex;
@@ -10,7 +11,7 @@ export const WrapperInfo = styled.div`
 `
 
 export const Buy = styled.button`
-  all: unset;
+  border: none;
   margin-top: 7px;
   width: 125px;
   height: 32px;
@@ -38,10 +39,10 @@ export const Container = styled.article`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 216px;
-  margin: 0 auto;
+  max-width: 216px;
   position: relative;
 
+  &:focus-within,
   &:hover {
     cursor: pointer;
 
@@ -54,11 +55,22 @@ export const Container = styled.article`
       opacity: 1;
     }
   }
+
+  @media screen and (max-width: 480px) {
+    ${Buy} {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    ${Stars.Container} {
+      margin-top: 6px;
+    }
+  }
 `
 
 export const Image = styled.img`
   width: 100%;
-  height: 200px;
+  height: 100%;
 `
 
 export const Name = styled.span`
@@ -69,11 +81,12 @@ export const Name = styled.span`
   line-height: ${({ theme }) => theme.fontSizes[16]};
   color: ${({ theme }) => theme.colors.text};
   text-transform: uppercase;
-`
 
-export const Stars = styled.span`
-  display: inline-block;
-  margin-top: 7px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 `
 
 export const WrapperPriceOf = styled.div`
@@ -88,6 +101,7 @@ export const WrapperPriceOf = styled.div`
 export const PriceOf = styled.span`
   font-size: ${({ theme }) => theme.fontSizes[12]};
   line-height: ${({ theme }) => theme.fontSizes[16]};
+  text-decoration-line: line-through;
 `
 
 export const BestPrice = styled.span`
@@ -120,6 +134,13 @@ export const SealText = styled.span`
   line-height: ${({ theme }) => theme.fontSizes[24]};
   color: ${({ theme }) => theme.colors.white};
   font-weight: 900;
+
+  @media screen and (max-width: 480px) {
+    font-weight: 600;
+    font-size: ${({ theme }) => theme.fontSizes[11]};
+    top: -15px;
+    left: 5px;
+  }
 `
 
 export const Seal = styled.div`
@@ -130,4 +151,9 @@ export const Seal = styled.div`
   position: absolute;
   top: 0;
   right: 0;
+
+  @media screen and (max-width: 480px) {
+    border-bottom: 30px solid transparent;
+    border-right: 30px solid ${({ theme }) => theme.colors.contrastBG};
+  }
 `

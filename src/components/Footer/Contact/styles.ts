@@ -1,18 +1,16 @@
 import styled from "styled-components"
 import { Icon } from "../../shared"
 
-export const Container = styled.div``
-
 export const ButtonContact = styled.a`
   display: flex;
   align-items: center;
-  width: 195px;
+  width: 198px;
   height: 38px;
   padding: 0 16px;
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ theme }) => theme.radii.default};
   text-decoration: unset;
-  
+
   &:last-child {
     margin-top: 25px;
   }
@@ -45,3 +43,5 @@ export const IconHeadphone = styled(Icon)`
     min-height: 18.58px;
   }
 `
+
+export const Container = styled.div``

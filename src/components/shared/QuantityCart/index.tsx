@@ -13,8 +13,8 @@ export const QuantityCart = () => {
   }, [cartItems])
 
   return (
-    <S.Container>
-      <Icon name="cart" />
+    <S.Container tabIndex={0}>
+      <Icon name="cart" labelIcon="Minicart"/>
       <S.Quantity>{cartTotalQuantity}</S.Quantity>
     </S.Container>
   )
