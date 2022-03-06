@@ -8,7 +8,7 @@ export const Center = styled.div`
   align-items: center;
 `
 
-export const Title = styled.h3`
+export const Title = styled.h2`
   color: ${({ theme }) => theme.colors.contrastText};
   font-size: ${({ theme }) => theme.fontSizes[22]};
   line-height: ${({ theme }) => theme.fontSizes[22]};

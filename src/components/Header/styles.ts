@@ -34,7 +34,7 @@ export const WrapperRow = styled.div`
   width: 80%;
 `
 
-export const Link = styled.div``
+export const Link = styled.a``
 
 export const Logo = styled(Icon)`
   display: flex;

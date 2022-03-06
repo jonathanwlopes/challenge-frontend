@@ -14,8 +14,8 @@ export const Header = () => {
   return (
     <S.Container>
       <S.Center>
-        <S.Link>
-          <S.Logo size="170" icon="logo-corebiz" />
+        <S.Link href="/" title="Home Page">
+          <S.Logo icon="logo-corebiz" />
         </S.Link>
         <S.WrapperRow>
           <Search placeholder="O que está procurando?" />

@@ -7,7 +7,7 @@ export const Localization = () => {
   return (
     <S.Container>
       <S.Title>Localização</S.Title>
-      <S.Item>{address}</S.Item>
+      <S.Item tabIndex={0}>{address}</S.Item>
       <S.Item>{city}</S.Item>
       <S.Item>{email}</S.Item>
       <S.Item>{telephone}</S.Item>

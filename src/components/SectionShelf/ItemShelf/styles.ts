@@ -27,7 +27,8 @@ export const Buy = styled.button`
   visibility: hidden;
   opacity: 0;
   transition-duration: 0.3s;
-
+  font-weight: 500;
+  
   &:hover {
     cursor: pointer;
     background: ${({ theme }) => theme.colors.black}CC;

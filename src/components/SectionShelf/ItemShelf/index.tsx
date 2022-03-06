@@ -15,8 +15,6 @@ export const ItemShelf = ({ product }: ItemShelfProps) => {
   const isPriceOff = !!product.listPrice
   const isInstallments = product.installments.length > 0
 
-  const [isFocus, setIsFocus] = useState(false)
-
   return (
     <S.Container tabIndex={0}>
       <S.Image src={product.imageUrl} alt={product.productName} title={product.productName} />
@@ -24,7 +22,7 @@ export const ItemShelf = ({ product }: ItemShelfProps) => {
         <S.Name>{product.productName}</S.Name>
         <Stars filled={product.stars} />
         <S.WrapperPriceOf>{isPriceOff && <S.PriceOf>de {product.formattedListPrice}</S.PriceOf>}</S.WrapperPriceOf>
-        <S.BestPrice>por: {product.formattedPrice}</S.BestPrice>
+        <S.BestPrice tabIndex={0}>por: {product.formattedPrice}</S.BestPrice>
         <S.WrapperInstallments>
           {isInstallments && <S.Installments>{`ou em ${product.installments[0]?.quantity}x de ${product.installments[0]?.value}`}</S.Installments>}
         </S.WrapperInstallments>

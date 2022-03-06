@@ -13,9 +13,9 @@ export const Stars = ({ filled }: StarsProps) => {
     <S.Container>
       {maxStars.map((star, idx) => {
         if (star === "filled") {
-          return <Icon key={idx} name="star-filled" labelIcon="Estrelas Avaliação" />
+          return <S.IconStarsFilled key={idx} icon="star-filled" />
         }
-        return <Icon key={idx} name="star-unfilled" labelIcon="Estrelas Avaliação" />
+        return <S.IconStarsFilled key={idx} icon="star-unfilled" />
       })}
     </S.Container>
   )

@@ -21,7 +21,7 @@ export const Center = styled.div`
   }
 `
 
-export const Title = styled.h3`
+export const Title = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes[20]};
   line-height: ${({ theme }) => theme.fontSizes[24]};
   color: ${({ theme }) => theme.colors.black};
@@ -35,6 +35,12 @@ export const Title = styled.h3`
     width: 65px;
     border-bottom: 4.29px solid ${({ theme }) => theme.colors.borderTitle};
     bottom: -6px;
+  }
+
+  @media screen and (max-width: 480px) {
+    &::before {
+      width: 32px;
+    }
   }
 `
 

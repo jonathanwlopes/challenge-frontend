@@ -28,3 +28,5 @@ export const OpenMenu = styled(Icon)`
   max-width: 22px;
   max-height: 15px;
 `
+
+export const Link = styled.a``
